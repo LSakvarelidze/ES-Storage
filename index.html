@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script type="text/javascript" src="js/app.js" defer></script> 
+  <script type="text/javascript" src="js/cart.js" defer></script> 
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="logo">
+      <h1>EVOLUTION</h1>
+    </div>
+  </header>
+  <section>
+  <!-- ITEMS LIST -->
+  <div class="itemslist">
+    <a href="#" data-name="item1" class="add-to-cart btn btn-primary">Item 1</a>
+    <a href="#" data-name="item2" class="add-to-cart btn btn-primary">Item 2</a>
+    <a href="#" data-name="item3" class="add-to-cart btn btn-primary">Item 3</a>
+    <a href="#" data-name="item4" class="add-to-cart btn btn-primary">Item 4</a>
+    <a href="#" data-name="item5" class="add-to-cart btn btn-primary">Item 5</a>
+    <a href="#" data-name="item6" class="add-to-cart btn btn-primary">Item 6</a>
+  </div>
+  <!-- Modal -->
+  <form name="submit-to-google-sheet">
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Items list</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total of items: <span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+            <input type="text" class="form-control" placeholder="Enter identifier" id="passwd" oninput="checkUser()">
+            <input type="hidden" id="fetchName" name="user">
+            <button type="submit" id="submitToGoogle" class="btn btn-primary">Confirm</button>
+        </div>   
+      </div>
+    </div>
+  </div>
+  </form>
+  </section>
+  <!-- cart buttons -->
+  <div class="cartBtns">
+    <button type="button"
+    class="btn btn-primary"
+    data-toggle="modal"
+    data-target="#cart">🛒Cart (<span class="total-count"></span>)</button>
+    <!--<button class="clear-cart btn btn-danger">Clear Cart</button>-->
+  </div>
+  <footer>
+  <p>&copy; All rights reserved.</p>
+  <!-- NOTFICATIONS -->
+  <div class="alert alert-success notifikacia" role="alert" style="display: none;">
+    <strong>Successfully done!</strong>
+  </div>
+  <div class="alert alert-danger notifikacia" role="alert" style="display: none;">
+    <strong>Something goes wrong!</strong>
+    <p class="errorText"></p>
+  </div>
+  </footer>
+  <!-- LOADER ANIMATION-->
+  <div id="loader" class="loader hide">
+    <div class="loadertext">
+      Please wait
+    </div>
+  </div>
+<!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
