@@ -65,6 +65,7 @@ function sameValue() {
   let eachItems = document.querySelectorAll('.eachItem');
   let updateTotalCard = document.querySelector('.total-cart');
   let updateTotal = 0;
+  let parseStorage = JSON.parse(sessionStorage.getItem('shoppingCart'));
   if(getFields.length == 0) {
     alert('Basket is empty!')
     trigger.value = ''
@@ -76,7 +77,12 @@ function sameValue() {
       })
       updateTotal += parseInt(field.defaultValue);
       updateTotalCard.textContent = updateTotal;
-      console.log(field.value, trigger.value)
     })
+    let lastResult = parseStorage.map((elem, index) => ({name: parseStorage[index].name, count: parseInt(trigger.value)}))
+    sessionStorage.setItem('shoppingCart', JSON.stringify(lastResult));
   }
 }
+
+
+ // sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+ // cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
