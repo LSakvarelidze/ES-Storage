@@ -72,7 +72,7 @@ function sameValue() {
     getFields.forEach(field => {
       field.defaultValue = trigger.value;
       eachItems.forEach(eachItem => {
-        eachItem.textContent = trigger.value + ".00"
+        eachItem.textContent = trigger.value
       })
       updateTotal += parseInt(field.defaultValue);
       updateTotalCard.textContent = updateTotal;
