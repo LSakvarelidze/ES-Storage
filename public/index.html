@@ -40,6 +40,15 @@
         </div>
         <div class="modal-body">
           <table class="show-cart table">
+            <span style="font-weight: bold; margin-right: 1rem;">
+              Entered value will be triggered for all the fields</span>
+            <input
+            type="text"
+            class="form-control"
+            placeholder="Entered quantity will enforce all fields"
+            id="letTrig"
+            style="margin-bottom: 15px; position: inherit; width: 50%; display: inline;"
+            oninput="sameValue()">
             
           </table>
           <div>Total of items: <span class="total-cart"></span></div>

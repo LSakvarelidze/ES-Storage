@@ -58,3 +58,25 @@ function checkUser(event) {
       }) 
   })
 }
+
+function sameValue() {
+  let trigger = document.getElementById('letTrig');
+  let getFields = document.querySelectorAll('.item-count');
+  let eachItems = document.querySelectorAll('.eachItem');
+  let updateTotalCard = document.querySelector('.total-cart');
+  let updateTotal = 0;
+  if(getFields.length == 0) {
+    alert('Basket is empty!')
+    trigger.value = ''
+  } else {
+    getFields.forEach(field => {
+      field.defaultValue = trigger.value;
+      eachItems.forEach(eachItem => {
+        eachItem.textContent = trigger.value + ".00"
+      })
+      updateTotal += parseInt(field.defaultValue);
+      updateTotalCard.textContent = updateTotal;
+      console.log(field.value, trigger.value)
+    })
+  }
+}
