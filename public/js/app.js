@@ -80,6 +80,17 @@ function sameValue() {
     })
     let lastResult = parseStorage.map((elem, index) => ({name: parseStorage[index].name, count: parseInt(trigger.value)}))
     sessionStorage.setItem('shoppingCart', JSON.stringify(lastResult));
+    lastResult.forEach(lastres => {
+      var name = lastres.name
+      var count = lastres.count
+      updateVals(name, count);
+    })
+    function updateVals(name, count) {
+      var name = name;
+      var count = Number(count);
+      shoppingCart.setCountForItem(name, count)
+      displayCart();
+    }
   }
 }
 
