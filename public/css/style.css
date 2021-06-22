@@ -11,13 +11,27 @@ header {
 header > div {
     display: inline-block;
 }
-section {
+fieldset {
     display: flex;
     border: 2px solid rgb(19, 63, 146); 
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 20px;
     padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+fieldset.scheduler-border {
+    border: 2px solid rgb(19, 63, 146) !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+legend.scheduler-border {
+    width: auto;
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
 }
 footer {
     bottom: 0;
@@ -40,7 +54,7 @@ footer {
     display: grid;
     grid-gap: 10px;
     padding: 10px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 
 @media (max-width: 700px) {
@@ -95,7 +109,7 @@ footer {
 }
 
 .cartBtns {
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 1rem;
 }

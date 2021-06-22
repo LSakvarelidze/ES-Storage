@@ -94,6 +94,14 @@ function sameValue() {
   }
 }
 
+<a href="#" data-name="deckbox1" class="add-to-cart btn btn-primary">Blue deck box #1</a>
 
- // sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
- // cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+//Drawn items sets
+let createItemRed, createItemBlue, boxesArea, decksArea;
+boxesArea = document.querySelector('.boxes')
+decksArea = document.querySelector('.decks')
+fieldSetItemRedBox = document.createElement('a')
+fieldSetItemRedDeck
+fieldSetItemRedCard
+fieldSetItemRedCard
+fieldSetItemRedBox.dataset.name = 'deckbox'

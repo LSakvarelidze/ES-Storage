@@ -17,15 +17,52 @@
       <h1>EVOLUTION</h1>
     </div>
   </header>
-  <section>
   <!-- ITEMS LIST -->
-  <div class="itemslist">
-    <a href="#" data-name="item1" class="add-to-cart btn btn-primary">Item 1</a>
-    <a href="#" data-name="item2" class="add-to-cart btn btn-primary">Item 2</a>
-    <a href="#" data-name="item3" class="add-to-cart btn btn-primary">Item 3</a>
-    <a href="#" data-name="item4" class="add-to-cart btn btn-primary">Item 4</a>
-    <a href="#" data-name="item5" class="add-to-cart btn btn-primary">Item 5</a>
-    <a href="#" data-name="item6" class="add-to-cart btn btn-primary">Item 6</a>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <fieldset class="scheduler-border boxes">
+      <legend class="scheduler-border">Deck boxes</legend>
+      <div class="itemslist">
+        <a href="#" data-name="deckbox1" class="add-to-cart btn btn-primary">Blue deck box #1</a>
+        <a href="#" data-name="deckbox2" class="add-to-cart btn btn-primary">Blue deck box #2</a>
+        <a href="#" data-name="deckbox3" class="add-to-cart btn btn-primary">Blue deck box #3</a>
+        <a href="#" data-name="deckbox4" class="add-to-cart btn btn-primary">Blue deck box #4</a>
+        <a href="#" data-name="deckbox5" class="add-to-cart btn btn-primary">Blue deck box #5</a>
+        <a href="#" data-name="deckbox6" class="add-to-cart btn btn-primary">Blue deck box #6</a>
+        <a href="#" data-name="deckbox7" class="add-to-cart btn btn-primary">Blue deck box #7</a>
+        <a href="#" data-name="deckbox8" class="add-to-cart btn btn-primary">Blue deck box #8</a>
+        <a href="#" data-name="deckbox9" class="add-to-cart btn btn-danger">Red deck box #1</a>
+        <a href="#" data-name="deckbox10" class="add-to-cart btn btn-danger">Red deck box #2</a>
+        <a href="#" data-name="deckbox11" class="add-to-cart btn btn-danger">Red deck box #3</a>
+        <a href="#" data-name="deckbox12" class="add-to-cart btn btn-danger">Red deck box #4</a>
+        <a href="#" data-name="deckbox13" class="add-to-cart btn btn-danger">Red deck box #5</a>
+        <a href="#" data-name="deckbox14" class="add-to-cart btn btn-danger">Red deck box #6</a>
+        <a href="#" data-name="deckbox15" class="add-to-cart btn btn-danger">Red deck box #7</a>
+        <a href="#" data-name="deckbox16" class="add-to-cart btn btn-danger">Red deck box #8</a>
+      </div>
+    </fieldset>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <fieldset class="scheduler-border decks">
+      <legend class="scheduler-border">Card decks</legend>
+      <div class="itemslist">
+        <a href="#" data-name="carddeck1" class="add-to-cart btn btn-primary">Blue card box #1</a>
+        <a href="#" data-name="carddeck2" class="add-to-cart btn btn-primary">Blue card box #2</a>
+        <a href="#" data-name="carddeck3" class="add-to-cart btn btn-primary">Blue card box #3</a>
+        <a href="#" data-name="carddeck4" class="add-to-cart btn btn-primary">Blue card box #4</a>
+        <a href="#" data-name="carddeck5" class="add-to-cart btn btn-primary">Blue card box #5</a>
+        <a href="#" data-name="carddeck6" class="add-to-cart btn btn-primary">Blue card box #6</a>
+        <a href="#" data-name="carddeck7" class="add-to-cart btn btn-primary">Blue card box #7</a>
+        <a href="#" data-name="carddeck8" class="add-to-cart btn btn-primary">Blue card box #8</a>
+        <a href="#" data-name="carddeck9" class="add-to-cart btn btn-danger">Red card box #1</a>
+        <a href="#" data-name="carddeck10" class="add-to-cart btn btn-danger">Red card box #2</a>
+        <a href="#" data-name="carddeck11" class="add-to-cart btn btn-danger">Red card box #3</a>
+        <a href="#" data-name="carddeck12" class="add-to-cart btn btn-danger">Red card box #4</a>
+        <a href="#" data-name="carddeck13" class="add-to-cart btn btn-danger">Red card box #5</a>
+        <a href="#" data-name="carddeck14" class="add-to-cart btn btn-danger">Red card box #6</a>
+        <a href="#" data-name="carddeck15" class="add-to-cart btn btn-danger">Red card box #7</a>
+        <a href="#" data-name="carddeck16" class="add-to-cart btn btn-danger">Red card box #8</a>
+      </div>
+    </fieldset>
   </div>
   <!-- Modal -->
   <form name="submit-to-google-sheet">
@@ -62,14 +99,13 @@
     </div>
   </div>
   </form>
-  </section>
   <!-- cart buttons -->
   <div class="cartBtns">
     <button type="button"
-    class="btn btn-primary"
+    class="btn btn-success"
     data-toggle="modal"
     data-target="#cart">🛒Cart (<span class="total-count"></span>)</button>
-    <button class="clear-cart btn btn-danger">Clear Cart</button>
+    <button class="clear-cart btn btn-danger" style="display:inline-flexbox; justify-content: right; align-items:flex-end;">Clear Cart</button>
   </div>
   <footer>
   <p>&copy; All rights reserved.</p>
