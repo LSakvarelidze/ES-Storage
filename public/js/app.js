@@ -5,9 +5,8 @@ const errorText = document.querySelector('.errorText').textContent;
 sButton.disabled = true
 if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
   $('.alert-success').show();
-  $('.alert-success').fadeTo(3000, 0);
-  setTimeout(_=> {
-    $('.alert-success').fadeTo(0, 100);
+  setTimeout(()=> {
+    $('.alert-success').fadeTo(3000, 0);
     $('.alert-success').hide()
   }, 3000);
 }
