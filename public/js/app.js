@@ -102,16 +102,16 @@ decksArea = document.querySelector('.decks .itemslist')
 for(i=1; i<=8; i++) {
   let blueBox = document.createElement('a')
   blueBox.href = '#'
-  blueBox.dataset.name = 'deckbox'+i
+  blueBox.dataset.name = 'bluedeckbox'+i
   blueBox.classList = 'add-to-cart btn btn-primary'
   blueBox.textContent = 'Blue deck box #'+i
   boxesArea.appendChild(blueBox)
 }
 //create red boxes
-for(i=9; i<=16; i++) {
+for(i=1; i<=8; i++) {
   let redBox = document.createElement('a')
   redBox.href = '#'
-  redBox.dataset.name = 'deckbox'+i
+  redBox.dataset.name = 'reddeckbox'+i
   redBox.classList = 'add-to-cart btn btn-danger'
   redBox.textContent = 'Red deck box #'+i
   boxesArea.appendChild(redBox)
@@ -120,16 +120,16 @@ for(i=9; i<=16; i++) {
 for(i=1; i<=8; i++) {
   let blueDeck = document.createElement('a')
   blueDeck.href = '#'
-  blueDeck.dataset.name = 'carddeck'+i
+  blueDeck.dataset.name = 'bluecarddeck'+i
   blueDeck.classList = 'add-to-cart btn btn-primary'
   blueDeck.textContent = 'Blue card deck #'+i
   decksArea.appendChild(blueDeck)
 }
 //create red boxes
-for(i=9; i<=16; i++) {
+for(i=1; i<=8; i++) {
   let redDeck = document.createElement('a')
   redDeck.href = '#'
-  redDeck.dataset.name = 'carddeck'+i
+  redDeck.dataset.name = 'redcarddeck'+i
   redDeck.classList = 'add-to-cart btn btn-danger'
   redDeck.textContent = 'Red card deck #'+i
   decksArea.appendChild(redDeck)
