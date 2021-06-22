@@ -56,14 +56,25 @@ footer {
     padding: 10px;
     grid-template-columns: repeat(8, 1fr);
 }
-
-@media (max-width: 700px) {
+@media (max-width: 1680px) {
+    .itemslist { grid-template-columns: repeat(7, 1fr); }
+}
+@media (max-width: 1450px) {
+    .itemslist { grid-template-columns: repeat(6, 1fr); }
+}
+@media (max-width: 1220px) {
+    .itemslist { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 1000px) {
+    .itemslist { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 800px) {
     .itemslist { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .itemslist { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 300px) {
+@media (max-width: 400px) {
     .itemslist { grid-template-columns: repeat(1, 1fr); }
 }
 /* LOADER STYLE */
@@ -115,4 +126,12 @@ footer {
 }
 .cartBtns > button {
     margin: 1rem;
+}
+
+.boxes .itemslist a{
+    width:155px
+}
+
+.decks .itemslist a{
+    width:155px
 }
