@@ -159,8 +159,23 @@ var shoppingCart = (function() {
     var cartArray = shoppingCart.listCart();
     var output = "";
     for(var i in cartArray) {
+      let dispCartItem = str => {
+        if(str.includes("blue") && str.includes("card")) {
+          return str.substr(0, 4) + ' ' + str.substr(4, 4) + ' ' + str.substr(8, 4) + ' #' + str.substr(12)
+        }
+        if(str.includes("red") && str.includes("card")) {
+          return str.substr(0, 3) + ' ' + str.substr(3, 4) + ' ' + str.substr(7, 4) + ' #' + str.substr(11)
+        }
+        if(str.includes("blue") && str.includes("box")) {
+          return str.substr(0, 4) + ' ' + str.substr(4, 4) + ' ' + str.substr(8, 3) + ' #' + str.substr(11)
+        }
+        if(str.includes("red") && str.includes("box")) {
+          return str.substr(0, 3) + ' ' + str.substr(3, 4) + ' ' + str.substr(7, 3) + ' #' + str.substr(10)
+        }
+      }
+      
       output += "<tr>"
-        + "<td>" + cartArray[i].name + "</td>" 
+        + "<td>" + dispCartItem(cartArray[i].name) + "</td>" 
         + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
         + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
