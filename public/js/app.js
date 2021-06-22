@@ -94,14 +94,43 @@ function sameValue() {
   }
 }
 
-<a href="#" data-name="deckbox1" class="add-to-cart btn btn-primary">Blue deck box #1</a>
-
 //Drawn items sets
-let createItemRed, createItemBlue, boxesArea, decksArea;
-boxesArea = document.querySelector('.boxes')
-decksArea = document.querySelector('.decks')
-fieldSetItemRedBox = document.createElement('a')
-fieldSetItemRedDeck
-fieldSetItemRedCard
-fieldSetItemRedCard
-fieldSetItemRedBox.dataset.name = 'deckbox'
+let boxesArea, decksArea;
+boxesArea = document.querySelector('.boxes .itemslist')
+decksArea = document.querySelector('.decks .itemslist')
+//create blue boxes
+for(i=1; i<=8; i++) {
+  let blueBox = document.createElement('a')
+  blueBox.href = '#'
+  blueBox.dataset.name = 'deckbox'+i
+  blueBox.classList = 'add-to-cart btn btn-primary'
+  blueBox.textContent = 'Blue deck box #'+i
+  boxesArea.appendChild(blueBox)
+}
+//create red boxes
+for(i=9; i<=16; i++) {
+  let redBox = document.createElement('a')
+  redBox.href = '#'
+  redBox.dataset.name = 'deckbox'+i
+  redBox.classList = 'add-to-cart btn btn-danger'
+  redBox.textContent = 'Red deck box #'+i
+  boxesArea.appendChild(redBox)
+}
+//create blue decks
+for(i=1; i<=8; i++) {
+  let blueDeck = document.createElement('a')
+  blueDeck.href = '#'
+  blueDeck.dataset.name = 'carddeck'+i
+  blueDeck.classList = 'add-to-cart btn btn-primary'
+  blueDeck.textContent = 'Blue card deck #'+i
+  decksArea.appendChild(blueDeck)
+}
+//create red boxes
+for(i=9; i<=16; i++) {
+  let redDeck = document.createElement('a')
+  redDeck.href = '#'
+  redDeck.dataset.name = 'carddeck'+i
+  redDeck.classList = 'add-to-cart btn btn-danger'
+  redDeck.textContent = 'Red card deck #'+i
+  decksArea.appendChild(redDeck)
+}
