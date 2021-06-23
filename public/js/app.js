@@ -1,15 +1,13 @@
+// ************************************************
+// Author: Levan Sakvarelidze
+// ************************************************
+
 const sButton = document.getElementById('submitToGoogle');
 const fetchName = document.getElementById('fetchName');
 const loader = document.getElementById('loader');
 const errorText = document.querySelector('.errorText').textContent;
 sButton.disabled = true
-if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-  $('.alert-success').show();
-  setTimeout(()=> {
-    $('.alert-success').fadeTo(3000, 0);
-    $('.alert-success').hide()
-  }, 3000);
-}
+
 //Post to google sheets
 function fetchData() {
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwwK9bq7-icY9gFWJwJFwGCeGkHkvhp0oSqVLug_N3zL7t-R56ppdZ6zQhj9bEeGJRs/exec'
@@ -21,8 +19,13 @@ function fetchData() {
       .then(response => {
         loader.classList.remove('show')
         loader.classList.add('hide')
-        window.location.reload();
-        sessionStorage.clear();
+        $('.alert-success').show();
+        setTimeout(()=> {
+          $('.alert-success').fadeTo(3000, 0);
+          $('.alert-success').hide()
+          window.location.reload();
+          sessionStorage.clear();
+        }, 3000);
       }).catch(error => {
         errorText = error.message
         loader.classList.remove('show')
