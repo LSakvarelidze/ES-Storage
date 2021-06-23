@@ -23,8 +23,8 @@ function fetchData() {
         setTimeout(()=> {
           $('.alert-success').fadeTo(3000, 0);
           $('.alert-success').hide()
-          window.location.reload();
           sessionStorage.clear();
+          window.location.reload();
         }, 3000);
       }).catch(error => {
         errorText = error.message
