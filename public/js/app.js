@@ -49,7 +49,7 @@ sButton.onclick = async function () {
 function checkUser(event) {
   let password = document.querySelector('#passwd').value
   // Firebase rules: ".read": true, ".write": false
-  $.getJSON("https://equipment-support-default-rtdb.europe-west1.firebasedatabase.app/.json", data => {
+  $.getJSON(ENV_DBURI, data => {
       let users = data[0]
       var keys = Object.keys(users);
       keys.forEach(key => {
